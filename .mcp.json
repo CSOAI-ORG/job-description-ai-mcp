@@ -1,20 +1,6 @@
 {
   "name": "job-description-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Job Description tools for AI agents and LLMs",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/job-description-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
-  "tools": [
-    "generate_job_description"
-  ],
-  "categories": [
-    "HR",
-    "Recruitment"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+  "description": "Job Description Ai Mcp \u2014 Generate and optimize job descriptions for any role.",
+  "version": "1.0.0",
+  "tools": []
 }

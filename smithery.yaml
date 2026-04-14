@@ -1,10 +1,5 @@
 name: job-description-ai-mcp
-description: "MEOK AI Labs — Job Description tools for AI agents and LLMs"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/job-description-ai-mcp
-license: MIT
-categories: [HR, Recruitment]
-tags: [job-description, recruitment, hiring, talent-acquisition, job-posting]
-runtime: python
-entrypoint: server.py
+description: "Job Description Ai Mcp \u2014 Generate and optimize job descriptions\
+  \ for any role."
+version: 1.0.0
+tools: []
