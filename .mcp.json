@@ -1,15 +1,84 @@
 {
   "name": "job-description-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Generate, analyze, and optimize job descriptions with bias checking.",
   "version": "1.0.0",
   "tools": [
     {
       "name": "generate_job_description",
-      "description": "Generate a job description",
+      "description": "Generate a complete job description for a given role and level.",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
+          },
+          "remote": {
+            "type": "boolean"
+          },
+          "skills": {
+            "type": "array"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      }
+    },
+    {
+      "name": "analyze_requirements",
+      "description": "Analyze a job description text and extract structured requirements.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "description"
+        ]
+      }
+    },
+    {
+      "name": "suggest_salary_range",
+      "description": "Suggest a competitive salary range based on role, level, and region.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      }
+    },
+    {
+      "name": "check_bias",
+      "description": "Check a job description for biased or non-inclusive language and suggest alternatives.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
       }
     }
   ]

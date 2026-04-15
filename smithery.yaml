@@ -1,7 +1,47 @@
 name: job-description-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Generate, analyze, and optimize job descriptions with bias checking.
 version: 1.0.0
 tools:
 - name: generate_job_description
-  description: Generate a job description
-  parameters: []
+  description: Generate a complete job description for a given role and level.
+  parameters:
+  - name: title
+    type: string
+    required: true
+  - name: level
+    type: string
+    required: false
+  - name: company
+    type: string
+    required: false
+  - name: remote
+    type: boolean
+    required: false
+  - name: skills
+    type: array
+    required: false
+- name: analyze_requirements
+  description: Analyze a job description text and extract structured requirements.
+  parameters:
+  - name: description
+    type: string
+    required: true
+- name: suggest_salary_range
+  description: Suggest a competitive salary range based on role, level, and region.
+  parameters:
+  - name: title
+    type: string
+    required: true
+  - name: level
+    type: string
+    required: false
+  - name: region
+    type: string
+    required: false
+- name: check_bias
+  description: Check a job description for biased or non-inclusive language and suggest
+    alternatives.
+  parameters:
+  - name: text
+    type: string
+    required: true
