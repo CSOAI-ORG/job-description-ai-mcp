@@ -1,6 +1,6 @@
 {
   "name": "job-description-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Generate, analyze, and optimize job descriptions with bias checking.",
+  "description": "MCP server for job description ai. Features generate job description, analyze requirements, suggest salary range. From MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {

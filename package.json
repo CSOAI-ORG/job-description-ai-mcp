@@ -1,7 +1,7 @@
 {
   "name": "job-description-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs — job description MCP Server",
+  "description": "MCP server for job description ai. Features generate job description, analyze requirements, suggest salary range. From MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "job description",
@@ -9,10 +9,22 @@
     "homepage": "https://meok.ai",
     "repository": "https://github.com/CSOAI-ORG/job-description-ai-mcp",
     "runtime": "python",
-    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "ai-tools"
+    ]
   },
-  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs"
+  ],
   "author": "MEOK AI Labs <nicholas@meok.ai>",
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/job-description-ai-mcp"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/job-description-ai-mcp"
+  }
 }
