@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/job-description-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+job_description_ai_mcp = "server:main"
