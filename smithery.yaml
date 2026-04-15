@@ -1,4 +1,7 @@
 name: job-description-ai-mcp
 description: MEOK AI Labs MCP Server
 version: 1.0.0
-tools: []
+tools:
+- name: generate_job_description
+  description: Generate a job description
+  parameters: []
