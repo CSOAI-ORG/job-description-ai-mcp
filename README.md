@@ -1,55 +1,38 @@
-# Job Description AI
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Generate, analyze, and optimize job descriptions with bias checking
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/job-description-ai-mcp)](https://github.com/CSOAI-ORG/job-description-ai-mcp/stargazers)
+
+# ujobU descriptionU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/job-description-ai-mcp)](https://www.npmjs.com/package/@meok-ai/job-description-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/job-description-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install job-description-ai-mcp
+# or
+npm install -g @meok-ai/job-description-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `generate_job_description`
-Generate a complete job description for a given role and level.
-
-**Parameters:**
-- `title` (str): Job title
-- `level` (str): Seniority level: junior, mid, senior, lead, principal (default: "mid")
-- `company` (str): Company name (default: "Our company")
-- `remote` (bool): Whether the role is remote (default: True)
-- `skills` (list[str]): Required skills list
-
-### `analyze_requirements`
-Analyze a job description text and extract structured requirements.
-
-**Parameters:**
-- `description` (str): Full job description text
-
-### `suggest_salary_range`
-Suggest a competitive salary range based on role, level, and region.
-
-**Parameters:**
-- `title` (str): Job title
-- `level` (str): Seniority level (default: "mid")
-- `region` (str): Region code: US, UK, EU, AU, CA, LATAM, IN, SEA (default: "US")
-
-### `check_bias`
-Check a job description for biased or non-inclusive language and suggest alternatives.
-
-**Parameters:**
-- `text` (str): Job description text to analyze
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
