@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "CSOAI-ORG/job-description-ai-mcp",
+  "version": "1.0.0",
+  "description": "Job Description Ai MCP Server by MEOK AI Labs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/job-description-ai-mcp",
+    "source": "https://github.com/CSOAI-ORG/job-description-ai-mcp"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "job-description-ai-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "python",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
