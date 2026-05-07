@@ -70,6 +70,15 @@ def generate_job_description(title: str, level: str = "mid", company: str = "Our
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        title (str): The title to analyze or process.
+        level (str): The level to analyze or process.
+        company (str): The company to analyze or process.
+        remote (bool): The remote to analyze or process.
+        skills (list[str]): The skills to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -145,6 +154,11 @@ def analyze_requirements(description: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        description (str): The description to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -212,6 +226,13 @@ def suggest_salary_range(title: str, level: str = "mid", region: str = "US", api
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        title (str): The title to analyze or process.
+        level (str): The level to analyze or process.
+        region (str): The region to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -270,6 +291,11 @@ def check_bias(text: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        text (str): The text to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
