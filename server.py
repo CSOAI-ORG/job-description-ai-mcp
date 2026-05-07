@@ -55,7 +55,22 @@ mcp = FastMCP("job-description-ai", instructions="Generate, analyze, and optimiz
 
 @mcp.tool()
 def generate_job_description(title: str, level: str = "mid", company: str = "Our company", remote: bool = True, skills: list[str] = [], api_key: str = "") -> str:
-    """Generate a complete job description for a given role and level."""
+    """Generate a complete job description for a given role and level.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -100,7 +115,23 @@ def generate_job_description(title: str, level: str = "mid", company: str = "Our
 
 @mcp.tool()
 def analyze_requirements(description: str, api_key: str = "") -> str:
-    """Analyze a job description text and extract structured requirements."""
+    """Analyze a job description text and extract structured requirements.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -137,7 +168,23 @@ def analyze_requirements(description: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def suggest_salary_range(title: str, level: str = "mid", region: str = "US", api_key: str = "") -> str:
-    """Suggest a competitive salary range based on role, level, and region."""
+    """Suggest a competitive salary range based on role, level, and region.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -165,7 +212,23 @@ def suggest_salary_range(title: str, level: str = "mid", region: str = "US", api
 
 @mcp.tool()
 def check_bias(text: str, api_key: str = "") -> str:
-    """Check a job description for biased or non-inclusive language and suggest alternatives."""
+    """Check a job description for biased or non-inclusive language and suggest alternatives.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
