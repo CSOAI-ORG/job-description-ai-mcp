@@ -1,45 +1,58 @@
-[![job-description-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/job-description-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/job-description-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/job-description-ai-mcp)](https://pypi.org/project/job-description-ai-mcp/)
-
-[![job-description-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/job-description-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/job-description-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/job-description-ai-mcp)](https://github.com/CSOAI-ORG/job-description-ai-mcp/stargazers)
+# Job Description Ai MCP
 
-# ujobU descriptionU aiU mcp
+**MCP server for job description ai mcp operations**
 
-****
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/job-description-ai-mcp)](https://www.npmjs.com/package/@meok-ai/job-description-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-job-description-ai-mcp)](https://pypi.org/project/meok-job-description-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/job-description-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Job Description Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `generate_job_description` | Generate a complete job description for a given role and level. |
+| `analyze_requirements` | Analyze a job description text and extract structured requirements. |
+| `suggest_salary_range` | Suggest a competitive salary range based on role, level, and region. |
+| `check_bias` | Check a job description for biased or non-inclusive language and suggest alterna |
 
 ## Installation
 
 ```bash
-pip install job-description-ai-mcp
-# or
-npm install -g @meok-ai/job-description-ai-mcp
+pip install meok-job-description-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "job-description-ai": {
+      "command": "python",
+      "args": ["-m", "meok_job_description_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 4 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/job-description-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
