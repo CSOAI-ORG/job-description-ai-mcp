@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""MEOK AI Labs — job-description-ai-mcp MCP Server. Generate and optimize job descriptions for any role."""
+"""
+MEOK AI Labs — job-description-ai-mcp MCP Server. Generate and optimize job descriptions for any role."""
 
 import json
 import re
@@ -8,7 +9,6 @@ from collections import defaultdict
 
 from mcp.server.fastmcp import FastMCP
 import sys, os
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 
 FREE_DAILY_LIMIT = 15
@@ -96,7 +96,7 @@ def generate_job_description(title: str, level: str = "mid", company: str = "Our
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     lvl = LEVEL_REQUIREMENTS.get(level, LEVEL_REQUIREMENTS["mid"])
@@ -176,7 +176,7 @@ def analyze_requirements(description: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     lower = description.lower()
@@ -250,7 +250,7 @@ def suggest_salary_range(title: str, level: str = "mid", region: str = "US", api
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     region_multipliers = {"US": 1.0, "UK": 0.85, "EU": 0.80, "AU": 0.90, "CA": 0.88, "LATAM": 0.45, "IN": 0.30, "SEA": 0.35}
@@ -313,7 +313,7 @@ def check_bias(text: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     lower = text.lower()
@@ -344,5 +344,8 @@ def check_bias(text: str, api_key: str = "") -> str:
     }, indent=2)
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

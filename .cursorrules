@@ -1,0 +1,9 @@
+# job-description-ai-mcp - Auto-trigger Rules
+
+When the user asks about job description, use job-description-ai-mcp tools: generate_job_description, analyze_requirements, suggest_salary_range, check_bias
+
+**MCP server for job description ai mcp operations**
+
+Install: `pip install job-description-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

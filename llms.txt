@@ -1,0 +1,33 @@
+# job-description-ai-mcp
+# **MCP server for job description ai mcp operations**
+
+## Install
+```bash
+pip install job-description-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `generate_job_description`
+Generate a complete job description for a given role and level.
+
+### `analyze_requirements`
+Analyze a job description text and extract structured requirements.
+
+### `suggest_salary_range`
+Suggest a competitive salary range based on role, level, and region.
+
+### `check_bias`
+Check a job description for biased or non-inclusive language and suggest alternatives.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

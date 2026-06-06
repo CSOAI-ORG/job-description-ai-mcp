@@ -1,0 +1,25 @@
+{
+  "name": "job-description-ai-mcp",
+  "title": "Job Description Ai Mcp",
+  "description": "MCP server for job description ai. Features generate job description, analyze requirements, suggest salary range. From MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "generate_job_description"
+    },
+    {
+      "name": "analyze_requirements"
+    },
+    {
+      "name": "suggest_salary_range"
+    },
+    {
+      "name": "check_bias"
+    }
+  ]
+}
