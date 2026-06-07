@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "job-description-ai-mcp",
+    "description": "Job Description Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "job-description-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_job_description",
+      "analyze_requirements",
+      "suggest_salary_range",
+      "check_bias"
+    ]
+  }
+}
